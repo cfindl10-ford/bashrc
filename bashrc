@@ -62,6 +62,13 @@ squash() {
 	git reset --soft HEAD~$1 && git commit --edit -m"$(git log --format=%B --reverse HEAD..HEAD@{1})"
 }
 
+dlgn() {
+	docker exec -it $1 bash
+}
+
+dhub() {
+	/Volumes/CFINDLAY/docker.sh $1
+}
 
 #   -------------------------------
 #   4. TERMINAL COLOR
